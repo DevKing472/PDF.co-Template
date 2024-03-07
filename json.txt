@@ -1,0 +1,965 @@
+{
+  "ID": 4408,
+  "Items": [
+    {
+      "Unit": null,
+      "ItemText": "Baldakin 234x88cm",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Baldakin spesial",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "156x88cm Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "156x88cm Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "156x88cm Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "156x88cm Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "140x88 Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "140x88 Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "140x88 Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "140x88 Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Baldakinhjørne Venstre",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 2
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 2
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 2
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 2
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Baldakinhjørne Venstre Spesial",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Baldakinhjørne Høyre",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 3
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 3
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 3
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 3
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Føtter til baldakin",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Fot til Baldakin",
+      "PartName": "1199",
+      "NumberOfItems": 72
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Baldakinskruer - Hvite - 30mm",
+      "PartName": "9100",
+      "NumberOfItems": 288
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Baldakintekst",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Frukt - Hvit - 180x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Frukt - Mork bla - 180x45cm ",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Frukt - Heritage oak light - 180x45 cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Grønnsaker - Hvit - 381,6x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Grønnsaker - Mørk blå - 381,6x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Grønnsaker - Heritage oak light - 381,6x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Fryste Bær - Hvit - 346x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Fryste Bær - Mørk Blå - 346x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Fryste Bær - Heritage oak light - 346x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle fortjener...  - Hvit - 435x50cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle fortjener... - Mørk blå - 435x50cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle fortjener... - Heritage oak light - 435x50cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle - Hvit - 82x40cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle - Mørk blå - 82x40cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle - Heritage oak light - 82x40cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Ikoner",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Hvite 25x25cm",
+      "PartName": "1252",
+      "NumberOfItems": 5
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Mørke blå 35x35cm",
+      "PartName": "1252",
+      "NumberOfItems": 7
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Kvalitetsgaranti - 50x50cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Kategoriskilt",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "125x10,7cm Hvit med tekst",
+      "PartName": "1254",
+      "NumberOfItems": 12
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "125x10,7cm Mørkblå med tekst",
+      "PartName": "1254",
+      "NumberOfItems": 12
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "125x10,7cm Grå med tekst",
+      "PartName": "1254",
+      "NumberOfItems": 12
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "125x10,7cm Rema blå med tekst",
+      "PartName": "1254",
+      "NumberOfItems": 12
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Tilbehør",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "sett",
+      "ItemText": "Hjørneforsterkning Baldakin - Sett med 2 skruer ",
+      "PartName": "RM-HJORNEFORST",
+      "NumberOfItems": 24
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Baldakinskruer - Inkludert antall",
+      "PartName": "RM-BSKRUER-INKL",
+      "NumberOfItems": 53
+    },
+    {
+      "Unit": "pk.",
+      "ItemText": "Wireoppheng baldakintekst - Ekstra antall",
+      "PartName": "RM-WIREOPPHENG-EKSTRA",
+      "NumberOfItems": 74
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Skjøtestykke baldakin",
+      "PartName": "RM-SKJOTESTYKK",
+      "NumberOfItems": 44
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk",
+      "ItemText": "Frakt - Postnord Partloads",
+      "PartName": "9311",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": "Ingen Advisering til kundens referanse",
+      "PartName": "INGENADVISERING",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Ekstra e-postvarsel/SMS: 91628797",
+      "PartName": "KUNDEVARSEL",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Ekstra e-postvarsel/SMS: stein.talsnes@bare-as.no",
+      "PartName": "KUNDEVARSEL",
+      "NumberOfItems": 1
+    },{
+      "Unit": null,
+      "ItemText": "Baldakin 234x88cm",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Baldakin spesial",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "156x88cm Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "156x88cm Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "156x88cm Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "156x88cm Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "140x88 Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "140x88 Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "140x88 Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "140x88 Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Baldakinhjørne Venstre",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 2
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 2
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 2
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 2
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Baldakinhjørne Venstre Spesial",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Baldakinhjørne Høyre",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Rema blå",
+      "PartName": "1299",
+      "NumberOfItems": 3
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Mørk blå",
+      "PartName": "1299",
+      "NumberOfItems": 3
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Heritage oak light",
+      "PartName": "1299",
+      "NumberOfItems": 3
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Romantic Oak brown",
+      "PartName": "1299",
+      "NumberOfItems": 3
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Føtter til baldakin",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Fot til Baldakin",
+      "PartName": "1199",
+      "NumberOfItems": 72
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Baldakinskruer - Hvite - 30mm",
+      "PartName": "9100",
+      "NumberOfItems": 288
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Baldakintekst",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Frukt - Hvit - 180x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Frukt - Mork bla - 180x45cm ",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Frukt - Heritage oak light - 180x45 cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Grønnsaker - Hvit - 381,6x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Grønnsaker - Mørk blå - 381,6x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Grønnsaker - Heritage oak light - 381,6x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Fryste Bær - Hvit - 346x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Fryste Bær - Mørk Blå - 346x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Fryste Bær - Heritage oak light - 346x45cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle fortjener...  - Hvit - 435x50cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle fortjener... - Mørk blå - 435x50cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle fortjener... - Heritage oak light - 435x50cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle - Hvit - 82x40cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle - Mørk blå - 82x40cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Alle - Heritage oak light - 82x40cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Ikoner",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Hvite 25x25cm",
+      "PartName": "1252",
+      "NumberOfItems": 5
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Mørke blå 35x35cm",
+      "PartName": "1252",
+      "NumberOfItems": 7
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Kvalitetsgaranti - 50x50cm",
+      "PartName": "1252",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Kategoriskilt",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "125x10,7cm Hvit med tekst",
+      "PartName": "1254",
+      "NumberOfItems": 12
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "125x10,7cm Mørkblå med tekst",
+      "PartName": "1254",
+      "NumberOfItems": 12
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "125x10,7cm Grå med tekst",
+      "PartName": "1254",
+      "NumberOfItems": 12
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "125x10,7cm Rema blå med tekst",
+      "PartName": "1254",
+      "NumberOfItems": 12
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": null,
+      "ItemText": "Tilbehør",
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "sett",
+      "ItemText": "Hjørneforsterkning Baldakin - Sett med 2 skruer ",
+      "PartName": "RM-HJORNEFORST",
+      "NumberOfItems": 24
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Baldakinskruer - Inkludert antall",
+      "PartName": "RM-BSKRUER-INKL",
+      "NumberOfItems": 53
+    },
+    {
+      "Unit": "pk.",
+      "ItemText": "Wireoppheng baldakintekst - Ekstra antall",
+      "PartName": "RM-WIREOPPHENG-EKSTRA",
+      "NumberOfItems": 74
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Skjøtestykke baldakin",
+      "PartName": "RM-SKJOTESTYKK",
+      "NumberOfItems": 44
+    },
+    {
+      "Unit": null,
+      "ItemText": null,
+      "PartName": null,
+      "NumberOfItems": 0
+    },
+    {
+      "Unit": "stk",
+      "ItemText": "Frakt - Postnord Partloads",
+      "PartName": "9311",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": null,
+      "ItemText": "Ingen Advisering til kundens referanse",
+      "PartName": "INGENADVISERING",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Ekstra e-postvarsel/SMS: 91628797",
+      "PartName": "KUNDEVARSEL",
+      "NumberOfItems": 1
+    },
+    {
+      "Unit": "stk.",
+      "ItemText": "Ekstra e-postvarsel/SMS: stein.talsnes@bare-as.no",
+      "PartName": "KUNDEVARSEL",
+      "NumberOfItems": 1
+    }
+  ],
+  "Comment": null,
+  "FreeTxt": null,
+  "OrderDate": "28.11.2022",
+  "UpdatedAt": "2022-11-30T10:05:26.086Z",
+  "fraktkode": "DTPGPF",
+  "CustomerID": 3816,
+  "frakttekst": "Postnord Partloads",
+  "InvoiceCity": "OSLO",
+  "OrderNumber": 11845,
+  "Requisition": "Testlab",
+  "SalesPerson": null,
+  "SendingDate": "22.11.2022",
+  "nshiftembed": "11845",
+  "CustomerName": "REMA 1000 NORGE AS",
+  "DeliveryDate": "30.11.2022",
+  "DeliveryName": "Stein Talsnes",
+  "EmailAddress": "john.roger.hansen@rema.no",
+  "OurReference": "Jarle Hana",
+  "ShippingCity": "LANGHUS",
+  "YourReference": "John Roger Hansen - 90765122",
+  "CustomerPerson": null,
+  "DeliveryMethod": null,
+  "InvoiceCountry": null,
+  "ShippingCountry": null,
+  "trello_short_url": "https://trello.com/c/r3meYxCB",
+  "CustomerOrgNumber": null,
+  "InvoicePostalCode": "0661",
+  "InvoiceCountryCode": null,
+  "ShippingPostalCode": "1405",
+  "InvoiceAddressLine1": null,
+  "InvoiceAddressLine2": null,
+  "InvoiceAddressLine3": null,
+  "ShippingCountryCode": null,
+  "ShippingAddressLine1": "Håndverksveien 31",
+  "ShippingAddressLine2": "port 24",
+  "ShippingAddressLine3": null,
+  "ContractDocumentReference": null
+}
