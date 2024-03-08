@@ -1,375 +1,416 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
     <title>Pakkseddel {{OrderNumber}}</title>
 
     <!-- PDF.co templates use Handlebars (advanced version of {{Moustache}} templates -->
     <!-- We can define our own HandleBarsJS helpers to calculate discounts, total amounts, formatting strings etc. See https://handlebarsjs.com/api-reference/runtime.html#handlebars-registerhelper-name-helper -->
     <script type="text/javascript">
-
-        // helper functions to create breaklines for text
-        Handlebars.registerHelper('breaklines', function (text) {
-            text = Handlebars.Utils.escapeExpression(text);
-            text = text.replace(/(\n|\r)/gm, '<br />');
-            return new Handlebars.SafeString(text);
-        });
-        
+      // helper functions to create breaklines for text
+      Handlebars.registerHelper("breaklines", function (text) {
+        text = Handlebars.Utils.escapeExpression(text);
+        text = text.replace(/(\n|\r)/gm, "<br />");
+        return new Handlebars.SafeString(text);
+      });
     </script>
 
     <!-- using version 0.20 PagedJS from bytescout hosting -->
     <script src="https://bytescout-com.s3.us-west-2.amazonaws.com/files/cloudapi-templates/paged.polyfill-020.js"></script>
 
-
     <!-- should be the last script in the header. Handlebars utilities should come first -->
     <script defer type="text/javascript">
-        class InvoicePageHandler extends Paged.Handler {
-
-            constructor(chunker, polisher, caller) {
-                super(chunker, polisher, caller);
-            }
-
-            afterRendered(pages) {
-
-                // logic to show/hide elements on each page
-                for (let i = 0; i < pages.length; i++) {
-                    const curPage = pages[i];
-
-                    let curPageElements = curPage.element;
-
-                    // first page
-                    // enabling/disabling elements
-                    if (i === 0) {
-                        curPage.element.getElementsByClassName("clsrem")[0].remove();
-                        //curPage.element.style.paddingTop = "2mm";
-                    }
-
-                }
-            }
+      class InvoicePageHandler extends Paged.Handler {
+        constructor(chunker, polisher, caller) {
+          super(chunker, polisher, caller);
         }
-        Paged.registerHandlers(InvoicePageHandler);
+
+        afterRendered(pages) {
+          // logic to show/hide elements on each page
+          for (let i = 0; i < pages.length; i++) {
+            const curPage = pages[i];
+
+            let curPageElements = curPage.element;
+
+            // first page
+            // enabling/disabling elements
+            if (i === 0) {
+              curPage.element.getElementsByClassName("clsrem")[0].remove();
+              //curPage.element.style.paddingTop = "2mm";
+            }
+          }
+        }
+      }
+      Paged.registerHandlers(InvoicePageHandler);
     </script>
 
-
     <style>
+      /* Print related stylesheet */
+      @media print {
+        /* Styling Page */
+        @page {
+          /* Setting Page Size to Letter. Find different page sizes at https://pagedjs.org/documentation/5-web-design-for-print/#page-size-property */
+          size: A4;
 
-        /* Print related stylesheet */
-        @media print {
+          /* Setting Page Margin of 10 mm */
+          margin: 10mm;
 
-            /* Styling Page */
-            @page {
+          /* Leaving padding of 20mm from top. This is to adjust for header.  */
+          padding-top: 17mm;
 
-                /* Setting Page Size to Letter. Find different page sizes at https://pagedjs.org/documentation/5-web-design-for-print/#page-size-property */
-                size: A4;
+          /* Leaving padding of 15mm from bottom. This is to adjust for footer.  */
+          padding-bottom: 14.85mm;
 
-                /* Setting Page Margin of 10 mm */
-                margin: 10mm;
+          font-family: "Lato", sans-serif;
 
-                /* Leaving padding of 20mm from top. This is to adjust for header.  */
-                padding-top: 17.0mm;
+          /* Setting repeating header. For more details visit https://pagedjs.org/documentation/7-generated-content-in-margin-boxes/#styling-running-elements */
+          @top-center {
+            content: element(titleRunning);
+            height: 20.3mm;
+            padding-top: 15mm;
+            padding-bottom: 10mm;
+          }
 
-                /* Leaving padding of 15mm from bottom. This is to adjust for footer.  */
-                padding-bottom: 14.85mm;
-                
-                font-family: 'Lato', sans-serif;
-                
-                /* Setting repeating header. For more details visit https://pagedjs.org/documentation/7-generated-content-in-margin-boxes/#styling-running-elements */
-                @top-center {
-                    content: element(titleRunning);
-                    height: 20.3mm;
-                    padding-top: 15mm;
-                    padding-bottom: 10mm;
-                }
-
-                /* Setting repeating footer. For more details visit https://pagedjs.org/documentation/7-generated-content-in-margin-boxes/#styling-running-elements */
-                @bottom-center {
-                    content: element(footerRunning);
-                }
-            }
-
-            /* Class for repeatable header. Used inside @top-center */
-            .title {
-                position: running(titleRunning);
-            }
-
-            /* Class for repeatable footer. Used inside @bottom-denter */
-            .bottom_running {
-                position: running(footerRunning);
-                margin-bottom: 10mm;
-            }
-
-            /* Setting Page Number */
-            .pageNumber::after {
-                content: 'Side 'counter(page) ' av 'counter(pages);
-            }
-
-
-            /* Table and Other MISC CSS Styles */
-            td,
-            th {
-                padding: 3px;
-            }
-
-            table.tableStripe tr:nth-child(even) td {
-                background: #F1F1F1;
-            }
-
-            table.tableStripe tr:nth-child(odd) td {
-                background: #FEFEFE;
-            }
-
-            tr[data-last-split-element] {
-                display: none;
-            }
-
-            table#tblMain tr td:nth-child(1) {
-                width: 20%;
-            }
-
-            table#tblMain tr td:nth-child(2) {
-                width: 50%;
-            }
-
-            table#tblMain tr td:nth-child(3) {
-                width: 10%;
-                text-align: center;
-            }
-            
-            table#tblMain tr td:nth-child(4) {
-                width: 10%;
-                text-align: center;
-                padding-top: 0px;
-                padding-bottom: 0px;
-            }
-            
-            table#tblMain tr td:nth-child(5) {
-                width: 10%;
-                text-align: center;
-                padding-top: 0px;
-                padding-bottom: 0px;
-            }
-
-            table#tblMain tr td {
-                padding-top: 10px;
-                padding-bottom: 10px;
-                font-size: 12px;
-            }
-            
-            .square {
-                  height: 25px;
-                  width: 50px;
-                  margin-left: auto;
-                  margin-right: auto;
-                  border: solid 1px black;
-            }
-            .kap {
-                font-size: 16px;
-                font-weight: 600;
-            }
+          /* Setting repeating footer. For more details visit https://pagedjs.org/documentation/7-generated-content-in-margin-boxes/#styling-running-elements */
+          @bottom-center {
+            content: element(footerRunning);
+          }
         }
+
+        /* Class for repeatable header. Used inside @top-center */
+        .title {
+          position: running(titleRunning);
+        }
+
+        .title .page-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+        }
+        .justify-content-between {
+          justify-content: space-between;
+        }
+
+        .title .page-header_logo > img {
+          width: 250px;
+        }
+
+        .title .page-header_order-details {
+          text-align: right;
+        }
+
+        /* Class for items table header, row, and cell */
+        .items-table_row {
+          display: flex;
+          background-color: #34495e;
+          color: white;
+          font-weight: 600;
+        }
+
+        .items-table_cell {
+          color: white;
+        }
+
+        .fs-small {
+          font-size: 12px;
+        }
+
+        .fs-lg{
+          font-size: 16px;
+        }
+
+        .fs-xl{
+          font-size: 18px;
+        }
+
+        .w-10 {
+          width: 10%;
+        }
+
+        .w-20 {
+          width: 20%;
+        }
+
+        .w-40 {
+          width: 40%;
+        }
+        .w-50 {
+          width: 50%;
+        }
+        .w-100 {
+          width: 100%;
+        }
+
+        .p-3 {
+          padding: 3px;
+        }
+
+        .pt-40 {
+          padding-top: 40px;
+        }
+        .pt-20 {
+          padding-top: 20px;
+        }
+        .pt-10 {
+          padding-top: 10px;
+        }
+        .pt-0 {
+          padding-top: 0px;
+        }
+        .pb-0 {
+          padding-bottom: 0;
+        }
+        .pb-10 {
+          padding-bottom: 10px;
+        }
+        .pb-20 {
+          padding-bottom: 20px;
+        }
+        .d-flex {
+          display: flex;
+        }
+        .flex-row {
+          flex-direction: row;
+        }
+        .flex-col {
+          flex-direction: column;
+        }
+        .text-left {
+          text-align: left;
+        }
+        .text-right {
+          text-align: right;
+        }
+        .vertical-align-top {
+          vertical-align: top;
+        }
+        .text-center {
+          text-align: center;
+        }
+        .justify-content-stretch {
+          justify-content: stretch;
+        }
+
+        /* Class for repeatable footer. Used inside @bottom-denter */
+        .bottom_running {
+          position: running(footerRunning);
+          margin-bottom: 10mm;
+        }
+
+        /* Setting Page Number */
+        .pageNumber::after {
+          content: "Side " counter(page) " av " counter(pages);
+        }
+
+        /* Class for repeatable Main */
+
+        .item-row:nth-child(even) {
+          background-color: #f1f1f1;
+        }
+
+        .item-row:nth-child(odd) {
+          background-color: #fefefe;
+        }
+
+        .item-row>div {
+          padding-top: 5px;
+          padding-bottom: 5px;
+          font-weight: 400;
+        }
+
+        .square {
+          height: 25px;
+          width: 50px;
+          margin-left: auto;
+          margin-right: auto;
+          border: solid 1px black;
+        }
+        .kap {
+          font-weight: 600;
+        }
+      }
     </style>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- header begin -->
     <section class="title">
+      <div class="page-header">
+        <div class="page-header_logo p-3">
+          <img
+            src="https://skiltogreklame.no/zapier/LogoErnestus.jpg"
+            width="250"
+          />
+        </div>
+        <div class="page-header_order-details p-3" style="padding-right: 20px;">
+          <h1 style="margin: 0">Pakkseddel {{ OrderNumber }}</h1>
+          <p style="margin: 0"><span class="pageNumber"></span></p>
+        </div>
+      </div>
 
-        <table style="width: 100%;">
-            <tr>
-                <td style="text-align: left;">                   
-                    <img src="https://skiltogreklame.no/zapier/LogoErnestus.jpg" width="250"/>
-                </td>
-                <td style="text-align: right; padding-right: 20px;">
-                       <h1 style="margin: 0;">Pakkseddel {{ OrderNumber }}</h1>
-                       <p style="margin: 0;"><span class="pageNumber"></span></p>
-                </td>
-          </table>
-          <div class="clsrem">
-           <table "cellpadding="0" cellspacing="0" style="color: white; background-color: #34495e; width:100%;">
-            <tr>
-                <th style="width: 20%; text-align: left;">Varenummer</th>
-                <th style="width: 50%; text-align: left;">Varenavn</th>
-                <th style="width: 10%; text-align: center;">Antall</th>
-                <th style="width: 10%; text-align: center;">Rest</th>
-                <th style="width: 10%; text-align: center;">Levert</th>
-            </tr>
-          </table>
-          </div> 
-           
-             
+      <div class="clsrem">
+        <div class="items-table_header items-table_row p-3">
+          <div class="items-table_cell text-left w-20 p-3">Varenummer</div>
+          <div class="items-table_cell text-left w-50 p-3">Varenavn</div>
+          <div class="items-table_cell text-center w-10 p-3">Antall</div>
+          <div class="items-table_cell text-center w-10 p-3">Rest</div>
+          <div class="items-table_cell text-center w-10 p-3">Levert</div>
+        </div>
+      </div>
     </section>
     <!-- header end -->
 
     <!-- footer begin -->
     <section class="bottom_running">
-
-        <div width: 100%">
-            <p style="margin: 0;"><span class="pageNumber"></span></p>
-        </div>
-        
+      <div style="width: 100%">
+        <p style="margin: 0"><span class="pageNumber"></span></p>
+      </div>
     </section>
     <!-- footer end -->
 
     <section id="main">
-        <div class="chapter" style="width: 100%; height: 70%;">
-
-         <table style="width: 100%;">    
-            
-            <tr>
-                <td style="width: 43%; vertical-align: top;">
-                    <table style="border: solid 0px black;" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <th style="text-align: left;">
-                                Fakturaadresse:
-                            </th>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; vertical-align: top;">
-                                {{ CustomerName }}<br />
-                                {{#if InvoiceAddressLine1}}{{InvoiceAddressLine1}}<br />{{/if}}
-                                {{#if InvoiceAddressLine2}}{{InvoiceAddressLine2}}<br />{{/if}}
-                                {{#if InvoiceAddressLine3}}{{InvoiceAddressLine3}}<br />{{/if}}
-                                {{InvoicePostalCode}} {{InvoiceCity}}<br />
-                                {{InvoiceCountry}}
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <td style="width: 43%; vertical-align: top;">
-                    <table cellspacing="0">
-                        <tr>
-                            <th style="text-align: left;">
-                                Sendingsadresse:
-                            </th>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; ">
-                                {{#if fraktkode}}
-                                {{#if DeliveryName}}{{ DeliveryName }}{{else}}{{ CustomerName }}{{/if}}<br />
-                                {{#if ShippingAddressLine1}}{{ShippingAddressLine1}}<br />{{/if}}
-                                {{#if ShippingAddressLine2}}{{ShippingAddressLine2}}<br />{{/if}}
-                                {{#if ShippingAddressLine3}}{{ShippingAddressLine3}}<br />{{/if}}
-                                {{ShippingPostalCode}} {{ShippingCity}}<br />
-                                {{ShippingCountry}}
-                                </br>
-                                {{/if}}
-                                {{frakttekst}}
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <td style="width: 24%; text-align: right;">
-                    <img src="[[barcode: QRCode {{trello_short_url}} ]]" width="100px" />
-                </td>
-            </tr>
-            
-        </table>
-        
-           <table style="width: 100%; padding-top: 20px; padding-bottom: 20px;">
-              <tr>
-                  <td style="text-align: left;">
-                      <span style="font-size: 16px; font-weight: 600;">
-                          Ordredato: {{ OrderDate }}
-                      </span>
-                  </td>
-                  <td style="text-align: left;">
-                      <span style="font-size: 16px; font-weight: 600;">
-                          Vår referanse: 
-                      </span>
-                      <span style="font-size: 16px; font-weight: 400;">
-                          {{ OurReference }}
-                      </span>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="text-align: left;">
-                      <span style="font-size: 16px; font-weight: 600;">
-                          Ønsket leveringsdato: {{ DeliveryDate }}
-                      </span>
-                  </td>
-                  <td style="text-align: left;">
-                      <span style="font-size: 16px; font-weight: 600;">
-                          Kundens referanse: 
-                      </span>
-                      <span style="font-size: 16px; font-weight: 400;">
-                          {{ YourReference }}
-                      </span>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="text-align: left;">
-                      <span style="font-size: 16px; font-weight: 600; color: red;">
-                          SENDINGSDATO: {{ SendingDate }}
-                      </span>
-                  </td>
-                  <td style="text-align: left;">
-                      <span style="font-size: 16px; font-weight: 600;">
-                          Rekvisisjon: 
-                      </span>
-                      <span style="font-size: 16px; font-weight: 400;">
-                          {{ Requisition }}
-                      </span>
-                  </td>
-              </tr>
-          </table>
-          
-          {{#if FreeTxt}}
-          <table style="width: 100%; padding-top: 0px; padding-bottom: 20px;">
-              <tr>
-                  <td style="text-align: left;">
-                      <span style="font-size: 12px; font-weight: 400">
-                          {{ breaklines FreeTxt }}
-                      </span>
-                  </td>
-              </tr>
-          </table>
-          {{/if}}
-
-        <table cellpadding="0" cellspacing="0" style="color: white; background-color: #34495e; width:100%;">
-            <tr>
-                <th style="width: 20%; text-align: left;">Varenummer</th>
-                <th style="width: 50%; text-align: left;">Varenavn</th>
-                <th style="width: 10%; text-align: center;">Antall</th>
-                <th style="width: 10%; text-align: center;">Rest</th>
-                <th style="width: 10%; text-align: center;">Levert</th>
-            </tr>
-        </table>
-
-            <table id="tblMain" class="tableStripe" cellpadding="0" cellspacing="0" style="width: 100%;">
-                {{#each Items}}
-                <tr>
-                    <td{{#if automasjon}} style="text-decoration: underline dotted;"{{/if}}>
-                        {{PartName}}{{#unless PartName}}<span>&nbsp;</span>{{/unless}}
-                    </td>
-                    <td{{#unless NumberOfItems}} class="kap"{{/unless}}>
-                        {{ ItemText }}
-                    </td>
-                    <td>{{#if NumberOfItems}}{{NumberOfItems}}{{/if}}</td>
-                    <td>{{#if NumberOfItems}}<div class="square">{{/if}}</div></td>
-                    <td>{{#if NumberOfItems}}<div class="square">{{/if}}</div></td>
-                </tr>
-                {{/each}}
-            </table>
+      <div class="chapter" style="width: 100%; height: 70%">
+        <div class="w-100">
+          <div class="d-flex flex-row">
+            <div class="vertical-align-top" style="width: 43%;">
+              <div style="border: solid 0px black">
+                <div class="text-left p-3" style="font-weight: bolder;">
+                  Fakturaadresse:
+                </div>
+                <div class="text-left vertical-align-top p-3">
+                  {{ CustomerName }}<br />
+                    {{#if InvoiceAddressLine1}}{{InvoiceAddressLine1}}<br />{{/if}}
+                    {{#if InvoiceAddressLine2}}{{InvoiceAddressLine2}}<br />{{/if}}
+                    {{#if InvoiceAddressLine3}}{{InvoiceAddressLine3}}<br />{{/if}}
+                    {{InvoicePostalCode}} {{InvoiceCity}}<br />
+                    {{InvoiceCountry}}
+                </div>
+              </div>
+            </div>
+            <div class="vertical-align-top" style="width: 43%;">
+              <div>
+                <div class="text-left p-3" style="font-weight: bolder;">
+                  Sendingsadresse:
+                </div>
+                <div class="text-left p-3">
+                  {{#if fraktkode}} {{#if DeliveryName}}{{ DeliveryName
+                  }}{{else}}{{ CustomerName }}{{/if}}<br />
+                  {{#if ShippingAddressLine1}}{{ShippingAddressLine1}}<br />{{/if}}
+                  {{#if ShippingAddressLine2}}{{ShippingAddressLine2}}<br />{{/if}}
+                  {{#if ShippingAddressLine3}}{{ShippingAddressLine3}}<br />{{/if}}
+                  {{ShippingPostalCode}} {{ShippingCity}}<br />
+                  {{ShippingCountry}}
+                  <br />
+                  {{/if}} {{frakttekst}}
+                </div>
+              </div>
+            </div>
+            <div class="text-right" style="width: 24%">
+              <img
+                src="[[barcode: QRCode {{trello_short_url}} ]]"
+                width="100px"
+              />
+            </div>
+          </div>
         </div>
-        
-          <table style="width: 100%; padding-top: 40px; padding-bottom: 20px;">
-              <tr>
-                  <td style="text-align: center; width: 40%;">
-                      <span style="font-size: 18px; font-weight: 600">
-                          Ant. kolli:_____________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dato: ____________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pakket av: _____________________________
-                      </span>
-                  </td>
-              </tr>
-          </table>
-          
+        <div class="w-100 pt-20 pb-20 d-flex flex-row">
+          <div style="width: 50%;">
+            <div class="text-left p-3">
+              <span style="font-size: 16px; font-weight: 600">
+                Ordredato: {{ OrderDate }}
+              </span>
+            </div>
+            <div  class="text-left p-3">
+              <span style="font-size: 16px; font-weight: 600">
+                Ønsket leveringsdato: {{ DeliveryDate }}
+              </span>
+            </div>
+            <div class="text-left p-3">
+              <span style="font-size: 16px; font-weight: 600; color: red">
+                SENDINGSDATO: {{ SendingDate }}
+              </span>
+            </div>
+          </div>
+          <div style="width: 50%;">
+            <div  class="text-left p-3">
+              <span style="font-size: 16px; font-weight: 600">
+                Vår referanse:
+              </span>
+              <span style="font-size: 16px; font-weight: 400">
+                {{ OurReference }}
+              </span>
+            </div>
+            <div  class="text-left p-3">
+              <span style="font-size: 16px; font-weight: 600">
+                Kundens referanse:
+              </span>
+              <span style="font-size: 16px; font-weight: 400">
+                {{ YourReference }}
+              </span>
+            </div>
+            <div class="text-left p-3">
+              <span style="font-size: 16px; font-weight: 600">
+                Rekvisisjon:
+              </span>
+              <span style="font-size: 16px; font-weight: 400">
+                {{ Requisition }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {{#if FreeTxt}}
+        <div class="w-100 pt-0 pb-20">
+          <div class="text-left d-flex flex-row">
+            <span style="font-size: 12px; font-weight: 400">
+              {{ breaklines FreeTxt }}
+            </span>
+          </div>
+        </div> 
+        {{/if}}
+
+        <div class="items-table_header items-table_row">
+          <div class="items-table_cell text-left w-20 p-3">Varenummer</div>
+          <div class="items-table_cell text-left w-50 p-3">Varenavn</div>
+          <div class="items-table_cell text-center w-10 p-3">Antall</div>
+          <div class="items-table_cell text-center w-10 p-3">Rest</div>
+          <div class="items-table_cell text-center w-10 p-3">Levert</div>
+        </div>
+
+        <div id="ifMain" class="ifStripe w-100 pt-0 pb-0">
+          {{#each Items}}
+            <div class="d-flex w-100 flex-row item-row fs-small p-3">
+              <div class="w-20 p-3" {{#if automasjon}} style="text-decoration: underline dotted;"{{/if}}>
+                {{PartName}}{{#unless PartName}}<span>&nbsp;</span>{{/unless}}
+              </div>
+              <div class="w-50 p-3" {{#unless NumberOfItems}} style="font-weight: 600; font-size: 14px;" {{/unless}}>
+                  {{ ItemText }}
+              </div>
+              <div class="w-10 pt-0 pb-0 p-3 text-center">{{#if NumberOfItems}}{{NumberOfItems}}{{/if}}</div>
+              <div class="w-10 pt-0 pb-0 p-3 text-center">{{#if NumberOfItems}}<div class="square"></div>{{/if}}</div>
+              <div class="w-10 pt-0 pb-0 p-3 text-center">{{#if NumberOfItems}}<div class="square"></div>{{/if}}</div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="w-100 pt-40 pb-20">
+        <div class="text-left w-100 p-3">
+          <span style="font-size: 18px; font-weight: 600">
+            Ant. kolli:_____________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dato:
+            ____________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pakket av:
+            ___________________________
+          </span>
+        </div>
+
+      </div>
     </section>
-
-</body>
-
+  </body>
 </html>
